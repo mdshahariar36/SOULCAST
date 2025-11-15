@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOULCAST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="background-image"></div>
+    
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">SOULCAST</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active">Home</li>
+                    <li class="menu-list-item">Movies</li>
+                    <li class="menu-list-item">Series</li>
+                    <li class="menu-list-item">Popular</li>
+                    <li class="menu-list-item">Trends</li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <button class="login-btn" id="loginBtn">Login</button>
+                <div class="dropdown">
+                    <div class="profile-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#" id="profileLogin">Login</a>
+                    </div>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <i class="left-menu-icon fas fa-search"></i>
+        <i class="left-menu-icon fas fa-home"></i>
+        <i class="left-menu-icon fas fa-users"></i>
+        <i class="left-menu-icon fas fa-bookmark"></i>
+        <i class="left-menu-icon fas fa-tv"></i>
+        <i class="left-menu-icon fas fa-hourglass-start"></i>
+        <i class="left-menu-icon fas fa-shopping-cart"></i>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to SOULCAST</h2>
+            <div id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password">
+                </div>
+                <button class="submit-btn" id="loginSubmit">Login</button>
+                <div class="form-switch">
+                    Don't have an account? <a id="switchToRegister">Register now</a>
+                </div>
+                <div class="success-message" id="loginSuccess">
+                    <i class="fas fa-check-circle"></i> Successfully logged in!
+                </div>
+            </div>
+            
+            <div id="registerForm" style="display: none;">
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password">
+                </div>
+                <button class="submit-btn" id="registerSubmit">Register</button>
+                <div class="form-switch">
+                    Already have an account? <a id="switchToLogin">Login now</a>
+                </div>
+                <div class="success-message" id="registerSuccess">
+                    <i class="fas fa-check-circle"></i> Successfully registered!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-container">
+            <!-- Featured Movie Section -->
+            <div class="featured-content" id="featuredMovie">
+                <img class="featured-background" src="img/DEMON SLAYER.jpg">
+                <div class="featured-overlay"></div>
+                <h1 class="featured-title">DEMON SLAYER</h1>
+                <p class="featured-desc">Tanjiro Kamado is a kind-hearted and intelligent boy who lives with his family in the mountains. After his family is slaughtered by demons, his sister Nezuko is the only survivor, but she has been turned into a demon herself.</p>
+                <button class="featured-button" id="featuredWatchBtn">WATCH NOW</button>
+            </div>
+
+            <!-- TOP AIRING Section -->
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">TOP AIRING</h1>
+                <div class="movie-list-wrapper">
+                    <i class="fas fa-chevron-left arrow arrow-left" id="topAiringLeft"></i>
+                    <div class="movie-list" id="topAiring">
+                        <!-- Movie cards will be inserted here by JavaScript -->
+                    </div>
+                    <i class="fas fa-chevron-right arrow arrow-right" id="topAiringRight"></i>
+                </div>
+            </div>
+
+            <!-- MOST POPULAR Section -->
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">MOST POPULAR</h1>
+                <div class="movie-list-wrapper">
+                    <i class="fas fa-chevron-left arrow arrow-left" id="mostPopularLeft"></i>
+                    <div class="movie-list" id="mostPopular">
+                        <!-- Movie cards will be inserted here by JavaScript -->
+                    </div>
+                    <i class="fas fa-chevron-right arrow arrow-right" id="mostPopularRight"></i>
+                </div>
+            </div>
+
+            <!-- TRENDING NOW Section -->
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">TRENDING NOW</h1>
+                <div class="movie-list-wrapper">
+                    <i class="fas fa-chevron-left arrow arrow-left" id="trendingNowLeft"></i>
+                    <div class="movie-list" id="trendingNow">
+                        <!-- Movie cards will be inserted here by JavaScript -->
+                    </div>
+                    <i class="fas fa-chevron-right arrow arrow-right" id="trendingNowRight"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Movie Page -->
+    <div class="movie-page" id="moviePage">
+        <div class="movie-page-content">
+            <h2 id="moviePageTitle">Movie Title</h2>
+            <p>The Movie Link Is Preparing.....</p>
+            <button class="back-btn" id="backBtn">Back to SOULCAST</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2023 SOULCAST Streaming Platform. All rights reserved.
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
